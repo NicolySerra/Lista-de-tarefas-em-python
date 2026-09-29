@@ -1,0 +1,47 @@
+# ✅ Lista de Tarefas em Python
+
+> Um gerenciador de tarefas simples, feito em Python, para praticar lógica de programação.
+
+## 📌 Sobre
+
+Aplicação de lista de tarefas criada como exercício de Python. O objetivo foi praticar estruturas de dados, laços de repetição, funções e interação com o usuário.
+
+## ✨ Funcionalidades
+
+> Ajuste esta lista conforme o que seu código realmente faz.
+
+- Adicionar novas tarefas
+- Listar as tarefas cadastradas
+- Marcar tarefas como concluídas
+- Remover tarefas
+
+## 🛠️ Tecnologias
+
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+
+## ▶️ Como executar
+
+Pré-requisito: [Python 3](https://www.python.org/downloads/) instalado.
+
+```bash
+git clone https://github.com/NicolySerra/Lista-de-tarefas-em-python.git
+cd Lista-de-tarefas-em-python
+python NOME-DO-ARQUIVO.py
+```
+
+## 💻 Exemplo de uso
+
+```text
+[cole aqui um exemplo do programa rodando no terminal]
+```
+
+## 🚀 Próximos passos
+
+- [ ] Salvar as tarefas em um arquivo para não perdê-las ao fechar
+- [ ] Adicionar prioridade e data limite
+- [ ] Criar uma interface gráfica ou versão web
+
+## 👩‍💻 Autora
+
+**Nicoly Serra**
+[GitHub](https://github.com/NicolySerra) · [LinkedIn](https://www.linkedin.com/in/nicoly-serra-10bb75252/)
