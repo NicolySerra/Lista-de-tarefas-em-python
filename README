@@ -15,10 +15,7 @@ Aplicação de lista de tarefas criada como exercício de Python. O objetivo foi
 - Marcar tarefas como concluídas
 - Remover tarefas
 
-## 🛠️ Tecnologias
-
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-
+ 
 ## ▶️ Como executar
 
 Pré-requisito: [Python 3](https://www.python.org/downloads/) instalado.
@@ -29,12 +26,7 @@ cd Lista-de-tarefas-em-python
 python NOME-DO-ARQUIVO.py
 ```
 
-## 💻 Exemplo de uso
-
-```text
-[cole aqui um exemplo do programa rodando no terminal]
-```
-
+ 
 ## 🚀 Próximos passos
 
 - [ ] Salvar as tarefas em um arquivo para não perdê-las ao fechar
