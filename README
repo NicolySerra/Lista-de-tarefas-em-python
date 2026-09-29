@@ -183,18 +183,6 @@ A estrutura inicial do sistema já foi criada, incluindo:
 * [x] Validação de data e horário
 * [x] Tratamento de entrada inválida
 
-### Próximas funcionalidades
-
-* [ ] Listar tarefas de forma organizada
-* [ ] Remover tarefas
-* [ ] Editar tarefas
-* [ ] Confirmar exclusão
-* [ ] Criar identificadores para as tarefas
-* [ ] Melhorar a validação de datas
-* [ ] Persistir tarefas em arquivo
-* [ ] Criar status para tarefas concluídas
-* [ ] Melhorar a interface do terminal
-
 ---
 
 ## 🔎 O que aprendi
