@@ -1,39 +1,252 @@
-# ✅ Lista de Tarefas em Python
+# 📝 Lista de Tarefas — Python
 
-> Um gerenciador de tarefas simples, feito em Python, para praticar lógica de programação.
+Um projeto desenvolvido em **Python** para praticar conceitos fundamentais de programação através da criação de uma lista de tarefas executada pelo terminal.
 
-## 📌 Sobre
+A aplicação permite cadastrar tarefas com **nome, descrição, data e horário**, utilizando um menu interativo no console.
 
-Aplicação de lista de tarefas criada como exercício de Python. O objetivo foi praticar estruturas de dados, laços de repetição, funções e interação com o usuário.
+> 🐍 Projeto desenvolvido durante meus estudos de Python, com foco em lógica de programação, funções, listas e tratamento de entradas do usuário.
 
-## ✨ Funcionalidades
+---
 
-> Ajuste esta lista conforme o que seu código realmente faz.
+## 🎯 Sobre o projeto
 
-- Adicionar novas tarefas
-- Listar as tarefas cadastradas
-- Marcar tarefas como concluídas
-- Remover tarefas
+A proposta foi criar uma aplicação simples de gerenciamento de tarefas utilizando apenas recursos básicos do Python.
 
- 
-## ▶️ Como executar
+Cada tarefa possui:
 
-Pré-requisito: [Python 3](https://www.python.org/downloads/) instalado.
+* 📌 Nome
+* 📝 Descrição
+* 📅 Data
+* ⏰ Horário
 
-```bash
-git clone https://github.com/NicolySerra/Lista-de-tarefas-em-python.git
-cd Lista-de-tarefas-em-python
-python NOME-DO-ARQUIVO.py
+As informações são armazenadas em uma lista enquanto o programa está em execução.
+
+---
+
+## ⚙️ Funcionamento
+
+Ao iniciar o programa, o usuário encontra um menu:
+
+```text
+MENU:
+
+1. Adicionar uma tarefa
+2. Listar tarefa
+3. Remover uma tarefa
+4. Editar uma tarefa
+5. Sair
 ```
 
- 
-## 🚀 Próximos passos
+A ideia é permitir que o usuário gerencie suas tarefas diretamente pelo terminal.
 
-- [ ] Salvar as tarefas em um arquivo para não perdê-las ao fechar
-- [ ] Adicionar prioridade e data limite
-- [ ] Criar uma interface gráfica ou versão web
+### Adicionando uma tarefa
 
-## 👩‍💻 Autora
+Ao escolher a opção `1`, o programa solicita:
 
-**Nicoly Serra**
-[GitHub](https://github.com/NicolySerra) · [LinkedIn](https://www.linkedin.com/in/nicoly-serra-10bb75252/)
+```text
+Digite o nome da tarefa:
+Digite a descrição da tarefa:
+Digite a data:
+Digite uma hora:
+```
+
+Depois, o programa verifica se a data e o horário informados estão em um formato válido antes de adicionar a tarefa à lista.
+
+---
+
+## 🧠 Conceitos praticados
+
+### 🐍 Funções
+
+O projeto utiliza funções para separar responsabilidades:
+
+```python
+def validar_data(data_hora):
+```
+
+e:
+
+```python
+def adicionar_tarefas(nome, descricao, data, hora, lista):
+```
+
+Isso ajuda a organizar o código e evita concentrar toda a lógica dentro do menu principal.
+
+---
+
+### 📅 Validação de datas
+
+A biblioteca `datetime` é utilizada para verificar se a data e o horário informados pelo usuário podem ser interpretados corretamente:
+
+```python
+from datetime import datetime
+```
+
+A validação é feita utilizando:
+
+```python
+datetime.strptime(data_hora, "%d/%m%y %H:%M")
+```
+
+Caso o formato seja inválido, a função retorna `False`.
+
+---
+
+### 📋 Listas
+
+As tarefas são armazenadas inicialmente em uma lista:
+
+```python
+lista = []
+```
+
+Quando uma nova tarefa é adicionada, suas informações são inseridas nessa lista.
+
+Atualmente, cada tarefa é armazenada como uma única string separada por `;`:
+
+```text
+nome;descrição;data;hora
+```
+
+---
+
+### 🛡️ Tratamento de exceções
+
+O projeto utiliza `try/except` para impedir que uma entrada inválida encerre o programa:
+
+```python
+try:
+    escolha = int(input("Escolha: "))
+except ValueError:
+    print("Opção inválida")
+    continue
+```
+
+Se o usuário digitar algo que não possa ser convertido para um número inteiro, o programa informa o erro e retorna ao menu.
+
+---
+
+## 🔄 Fluxo da aplicação
+
+```text
+Início
+  ↓
+Exibe menu
+  ↓
+Usuário escolhe uma opção
+  ↓
+┌─────────────────────┐
+│ 1 → Adicionar       │
+│ 2 → Listar          │
+│ 3 → Remover         │
+│ 4 → Editar          │
+│ 5 → Sair            │
+└─────────────────────┘
+  ↓
+Processa a escolha
+  ↓
+Retorna ao menu
+```
+
+---
+
+## 🛠️ Tecnologias
+
+* 🐍 Python
+* `datetime`
+* Terminal / Console
+
+---
+
+## 📂 Estrutura
+
+```text
+lista-de-tarefas/
+│
+└── lista_tarefas.py
+```
+
+---
+
+## 🚧 Status do projeto
+
+**Em desenvolvimento.**
+
+A estrutura inicial do sistema já foi criada, incluindo:
+
+* [x] Menu principal
+* [x] Cadastro de tarefas
+* [x] Nome da tarefa
+* [x] Descrição
+* [x] Data
+* [x] Horário
+* [x] Validação de data e horário
+* [x] Tratamento de entrada inválida
+
+### Próximas funcionalidades
+
+* [ ] Listar tarefas de forma organizada
+* [ ] Remover tarefas
+* [ ] Editar tarefas
+* [ ] Confirmar exclusão
+* [ ] Criar identificadores para as tarefas
+* [ ] Melhorar a validação de datas
+* [ ] Persistir tarefas em arquivo
+* [ ] Criar status para tarefas concluídas
+* [ ] Melhorar a interface do terminal
+
+---
+
+## 🔎 O que aprendi
+
+Este projeto foi desenvolvido para consolidar conceitos fundamentais de Python.
+
+Durante sua construção, pratiquei:
+
+```text
+Entrada de dados
+      ↓
+Tratamento de erros
+      ↓
+Funções
+      ↓
+Validação
+      ↓
+Listas
+      ↓
+Manipulação de datas
+      ↓
+Lógica de programação
+```
+
+Mais do que criar uma lista de tarefas, o projeto serviu como exercício para aprender a estruturar um programa interativo e dividir sua lógica em pequenas responsabilidades.
+
+---
+
+## 💭 Próximos passos
+
+Uma evolução natural seria substituir a estrutura atual:
+
+```text
+"nome;descrição;data;hora"
+```
+
+por uma estrutura mais organizada, como dicionários:
+
+```python
+{
+    "nome": "Estudar Python",
+    "descricao": "Praticar funções",
+    "data": "30/09/2026",
+    "hora": "19:00",
+    "concluida": False
+}
+```
+
+Posteriormente, as tarefas poderiam ser armazenadas em **JSON ou SQLite**, permitindo que continuassem disponíveis mesmo depois que o programa fosse encerrado.
+
+---
+
+### 👩🏻‍💻 Desenvolvido por Nicoly Serra
+
+Projeto criado como parte da minha jornada de estudos em **programação e tecnologia**.
